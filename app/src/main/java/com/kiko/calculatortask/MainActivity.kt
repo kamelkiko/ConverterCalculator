@@ -17,10 +17,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clearBtn: MaterialButton
     private lateinit var textWatcher: TextWatcher
     private lateinit var onFocusChangeListener: View.OnFocusChangeListener
+    private lateinit var converter: Converter
     private var focusId: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        converter = Converter()
         initViews()
         addCallBack()
     }
@@ -74,7 +76,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun convertNumber(s: Editable?) {
-        val converter = Converter()
         converter.convert(focusId, s)
         when (focusId) {
             R.id.binary -> {
