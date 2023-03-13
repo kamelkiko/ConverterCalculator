@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculator Task</string>
+    <string name="binary_calculator">Binary Calculator</string>
+    <string name="logo">Logo</string>
+    <string name="binary">Binary</string>
+    <string name="decimal">Decimal</string>
+    <string name="octal">Octal</string>
+    <string name="clear">Clear</string>
+    <string name="hex">Hex</string>
+</resources>

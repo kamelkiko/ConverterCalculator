@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="largeText">24sp</dimen>
+    <dimen name="marginNormal">16dp</dimen>
+    <dimen name="radiusSmall">8dp</dimen>
+    <dimen name="smallText">16sp</dimen>
+    <dimen name="radiusLarge">100dp</dimen>
+    <dimen name="image_size">220dp</dimen>
+</resources>

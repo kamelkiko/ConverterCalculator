@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/base"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@drawable/text_bg"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="@string/binary_calculator"
+        android:textColor="@color/white"
+        android:textSize="@dimen/largeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/amico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/base" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/binary_et"
+                style="@style/TextInputLayout"
+                android:hint="@string/binary"
+                app:boxCornerRadiusBottomEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusBottomStart="@dimen/radiusSmall"
+                app:boxCornerRadiusTopEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusTopStart="@dimen/radiusSmall"
+                app:boxStrokeColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/binary"
+                    style="@style/TextInputEditText.Binary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/decimal_et"
+                style="@style/TextInputLayout"
+                android:hint="@string/decimal"
+                app:boxCornerRadiusBottomEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusBottomStart="@dimen/radiusSmall"
+                app:boxCornerRadiusTopEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusTopStart="@dimen/radiusSmall"
+                app:boxStrokeColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/binary_et"
+                app:layout_constraintStart_toStartOf="@id/binary_et"
+                app:layout_constraintTop_toBottomOf="@id/binary_et">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/decimal"
+                    style="@style/TextInputEditText.Decimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/octal_et"
+                style="@style/TextInputLayout"
+                android:hint="@string/octal"
+                app:boxCornerRadiusBottomEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusBottomStart="@dimen/radiusSmall"
+                app:boxCornerRadiusTopEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusTopStart="@dimen/radiusSmall"
+                app:boxStrokeColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/binary_et"
+                app:layout_constraintStart_toStartOf="@id/binary_et"
+                app:layout_constraintTop_toBottomOf="@id/decimal_et">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/octal"
+                    style="@style/TextInputEditText.Octal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/hex_et"
+                style="@style/TextInputLayout"
+                android:hint="@string/hex"
+                app:boxCornerRadiusBottomEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusBottomStart="@dimen/radiusSmall"
+                app:boxCornerRadiusTopEnd="@dimen/radiusSmall"
+                app:boxCornerRadiusTopStart="@dimen/radiusSmall"
+                app:boxStrokeColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/binary_et"
+                app:layout_constraintStart_toStartOf="@id/binary_et"
+                app:layout_constraintTop_toBottomOf="@id/octal_et">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hex"
+                    style="@style/TextInputEditText.Hex" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="@dimen/marginNormal"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:backgroundTint="@color/text_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/clear"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="@dimen/radiusLarge"
+                app:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hex_et"
+                app:rippleColor="@color/clicked" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

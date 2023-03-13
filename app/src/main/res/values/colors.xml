@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#121212</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#99121212</color>
+    <color name="hint_Color">#61121212</color>
+    <color name="white">#FAFAFA</color>
+    <color name="base">#FAFAFA</color>
+    <color name="text_bg">#1A232A</color>
+    <color name="clicked">#DE525353</color>
+</resources>
